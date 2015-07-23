@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ES6-Modules</title>
+        <meta charset="utf-8" />
+        <script src="./Libraries/es6-shim.js"></script>
+    </head>
+    <body>
+        <h1>ES6-Modules</h1>
+        <script>
+            System.config({
+                baseURL: '/Classes'
+            });
+
+            // loads /Classes/Main.es6
+            System.import('Main');
+        </script>
+    </body>
+</html>
