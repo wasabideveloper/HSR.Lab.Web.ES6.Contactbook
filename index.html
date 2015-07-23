@@ -1,23 +1,23 @@
 <!doctype html>
 <html>
-    <head>
-        <title>ES6-Modules</title>
-        <meta charset="utf-8" />
-        <script src="./Libraries/es6-shim.js"></script>
-    </head>
-    <body>
-        <h1>Contacts</h1>
-        <ul id="contactbook">
+	<head>
+		<title>ES6-Modules</title>
+		<meta charset="utf-8" />
+		<script src="./Libraries/es6-shim.js"></script>
+	</head>
+	<body>
+		<h1>Contacts</h1>
+		<ul id="contactbook">
 
-        </li>
-        <script>
-            "use strict";
-            //import {main} from 'Classes/Main.es6';
-            //main(document.getElementById('contactbook'));
+		</li>
+		<script>
+			'use strict';
+			//import {main} from 'Classes/Main.es6';
+			//main(document.getElementById('contactbook'));
 
-            System.import('Classes/Main').then(function(Main){
-                Main.main(document.getElementById('contactbook'));
-            });
-        </script>
-    </body>
+			System.import('Classes/Main').then(function(Main){
+				Main.main(document.getElementById('contactbook'));
+			});
+		</script>
+	</body>
 </html>
