@@ -3,19 +3,18 @@
     <head>
         <title>ES6-Modules</title>
         <meta charset="utf-8" />
-        <script src="./Libraries/es6-shim.js"></script>
+        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <!-- es6-shim is not working, so use es6-module-loader -->
+        <script src="./Libraries/es6-module-loader-dev.js"></script>
     </head>
     <body>
         <h1>ES6-Modules</h1>
         <script>
             "use strict";
-
-            System.config({
-                baseURL: '/Classes',
-            });
+            System.transpiler = 'traceur';
 
             // loads /Classes/Main.js
-            System.import('Main.es6').then(function(Main) {
+            System.import('Classes/Main.es6').then(function(Main) {
                 Main.main();
             });
         </script>
