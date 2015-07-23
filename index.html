@@ -3,9 +3,10 @@
     <head>
         <title>ES6-Modules</title>
         <meta charset="utf-8" />
-        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <!--<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>-->
         <!-- es6-shim is not working, so use es6-module-loader -->
-        <script src="./Libraries/es6-module-loader-dev.js"></script>
+        <!--<script src="./Libraries/es6-module-loader-dev.js"></script>-->
+        <!--<script src="./Libraries/es6-shim.js"></script>-->
     </head>
     <body>
         <h1>Contacts</h1>
@@ -14,12 +15,14 @@
         </li>
         <script>
             "use strict";
-            System.transpiler = 'traceur';
-
-            // loads /Classes/Main.js
-            System.import('Classes/Main.es6').then(function(Main) {
-                Main.main(document.getElementById('contactbook'));
-            });
+            import {main} from 'Classes/Main.es6';
+            main(document.getElementById('contactbook'));
+            /*System.paths = {
+                '*'
+            }
+            System.import('Classes/Main.es6').then(function(main){
+                main(document.getElementById('contactbook'));
+            });*/
         </script>
     </body>
 </html>
