@@ -3,7 +3,24 @@
 ES6 based example application to show ES6 modules and classes (using shim loader)
 
 
-## Run application
+## Develpment
+
+### Environment
+
+* Install node.js
+* Install npm module typescript
+```bash
+sudo npm install typescript -g 
+```
+
+
+## Compile application
+```bash
+tsc --target ES6 ./Classes/Main.ts
+```
+
+
+### Run application
 
 * Install node.js to get the node package manager (npm)
 * Install http-server global
