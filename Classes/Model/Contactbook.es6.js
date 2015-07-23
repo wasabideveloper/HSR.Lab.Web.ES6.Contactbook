@@ -18,10 +18,11 @@ export class Contactbook {
         this.contacts.push(contact);
     }
 
-    set contacts(contacts) {
+    setContacts(contacts) {
         this.contacts = contacts;
     }
-    get contacts() {
+
+    getContacts() {
         return this.contacts;
     }
 }

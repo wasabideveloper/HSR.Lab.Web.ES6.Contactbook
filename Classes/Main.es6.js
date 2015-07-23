@@ -1,4 +1,5 @@
 "use strict";
+import {Contact} from 'Classes/Model/Contact.es6'
 import {Contactbook} from 'Classes/Model/Contactbook.es6'
 
 export function main(contactbookNode) {
@@ -6,12 +7,12 @@ export function main(contactbookNode) {
 
     var contactbook = new Contactbook();
 
-    contactbook.addContact(contact = new Contact('Sandro', 'Meyer'));
-    contactbook.addContact(contact = new Contact('Laura', 'Fischer'));
-    contactbook.addContact(contact = new Contact('Jan', 'Sandoz'));
+    contactbook.addContact(new Contact('Sandro', 'Meyer'));
+    contactbook.addContact(new Contact('Laura', 'Fischer'));
+    contactbook.addContact(new Contact('Jan', 'Sandoz'));
 
     console.log(contactbook.contacts);
-    contactbook.contacts.forEach(function(contact){
+    contactbook.getContacts().forEach(function(contact){
         var listNode = document.createElement('li');
         listNode.appendChild(document.createTextNode(contact.fullName));
         contactbookNode.appendChild(listNode);
