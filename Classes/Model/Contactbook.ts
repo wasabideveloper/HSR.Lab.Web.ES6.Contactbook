@@ -1,32 +1,32 @@
-"use strict";
+'use strict';
+
 import {Contact} from 'Classes/Model/Contact';
 
 
-// type is not visible outside of module
 enum ContactbookType {
-    private,
-    business
+	private,
+	business
 }
 
-// export class to use in other modules
+
 export class Contactbook {
-    contactbookType: ContactbookType;
-    contactList: Contact[];
+	contactbookType: ContactbookType;
+	contactList: Contact[];
 
-    constructor() {
-        this.contactbookType = ContactbookType.private;
-        this.contactList = [];
-    }
+	constructor() {
+		this.contactbookType = ContactbookType.private;
+		this.contactList = [];
+	}
 
-    addContact(contact):void {
-        this.contactList.push(contact);
-    }
+	addContact(contact):void {
+		this.contactList.push(contact);
+	}
 
-    set contact(contacts) {
-        this.contactList = contacts;
-    }
+	set contact(contacts) {
+		this.contactList = contacts;
+	}
 
-    get contacts():Contact[] {
-        return this.contactList;
-    }
+	get contacts():Contact[] {
+		return this.contactList;
+	}
 }
