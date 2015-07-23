@@ -11,7 +11,6 @@ export function main(contactbookNode) {
     contactbook.addContact(new Contact('Laura', 'Fischer'));
     contactbook.addContact(new Contact('Jan', 'Sandoz'));
 
-    console.log(contactbook.contacts);
     contactbook.getContacts().forEach(function(contact){
         var listNode = document.createElement('li');
         listNode.appendChild(document.createTextNode(contact.fullName));

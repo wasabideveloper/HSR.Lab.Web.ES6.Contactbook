@@ -25,4 +25,15 @@ export class Contactbook {
     getContacts() {
         return this.contacts;
     }
+    /**
+     * setter/getter not supported by es6 shim
+
+    set contacts(contacts) {
+        this.contacts = contacts;
+    }
+
+    get contacts() {
+        return this.contacts;
+    }
+    */
 }
