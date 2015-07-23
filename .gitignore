@@ -1,3 +1,8 @@
+# TSC generated files
+/Classes/*.js
+/Classes/*/*.js
+
+
 # temporary files
 *~
 *.swp
